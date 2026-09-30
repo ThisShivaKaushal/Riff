@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --lightblack: #1c1c1e;
+    --white: #fff;
+    --red: #fa233b;
+    --grey: #98989d;
+    --carrot: #fb5c74;
+
+}
+
+body {
+    background: var(--lightblack);
+    color: var(--white);
+    font-family: "Segoe UI", Arial, Sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 6px 4px;
+    background: rgb(61, 61, 61);
+    backdrop-filter: blur(3px);
+    font-size: 24px;
+    color: var(--red);
+    -webkit-backdrop-filter: blur(3px);
+    border-bottom: 1px solid rgb(85, 33, 33);
+    box-shadow: 0 20px 30px rgb(85, 35, 35);
+}
+
+
+.Githubprofile img {
+    width: 32px;
+    filter: invert()
+}
+
+main {
+    max-width: 600px;
+    margin: 120px auto 0;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.about h3 {
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+
+.about p {
+    color: var(--grey);
+    line-height: 1.6;
+    margin-bottom: 36px;
+}
+
+.music-button {
+    background: var(--red);
+    color: var(--white);
+    padding: 14px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.music-button:hover {
+    background: var(--carrot);
+}
