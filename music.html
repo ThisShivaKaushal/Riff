@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riff Jukebox</title>
+</head>
+
+<body class="bgmain">
+
+    <header class="musicheader">
+        <div class="logo">
+            <img>
+        </div>
+
+        <div class="back">
+            <a><img></a>
+        </div>
+    </header>
+
+    <!---sidebar navigation-->
+    <aside id="sidebar">
+        <nav id="sidebarnav">
+            <button class="navbutton active" data-tab="catalog"><i
+                    data-lucide="home"></i><span>Dashboard</span></button>
+            <button class="navbutton" data-tab="library"><i data-lucide="library"><span>Library</span></i></button>
+            <button class="navbutton" data-tab="history"><i data-lucide="clock-3"><span>History</span></i></button>
+            <button class="navbutton" data-tab="like"><i data-lucide="heart"><span>Liked Songs</span></i></button>
+        </nav>
+
+        <div id="sidebardivider"></div>
+
+        <div id="queuepart">
+            <div id="queueheader">
+                <span>Upcoming Queue</span>
+                <span id="queuecount">0 items</span>
+            </div>
+            <div id="queuelist">
+                <!--music stored in frontend will fetch using javascript-->
+            </div>
+        </div>
+    </aside>
+
+    <!--dashboard-->
+    <main id="dashboard">
+        <h2 id="title">Dashboard</h2>
+
+        <div id="musicgrid">
+            <!--this also fetch using javascript-->
+        </div>
+    </main>
+
+</body>
+
+</html>
