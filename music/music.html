@@ -5,17 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Riff Jukebox</title>
+    <link rel="stylesheet" href="music.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body class="bgmain">
 
     <header class="musicheader">
         <div class="logo">
-            <img>
+            <h2>Riff Jukebox</h2>
         </div>
 
         <div class="back">
-            <a><img></a>
+            <a href="../index.html"><i data-lucide="arrow-left"></i></a>
         </div>
     </header>
     <div class="main">
@@ -24,9 +26,9 @@
             <nav id="sidebarnav">
                 <button class="navbutton active" data-tab="catalog"><i
                         data-lucide="home"></i><span>Dashboard</span></button>
-                <button class="navbutton" data-tab="library"><i data-lucide="library"><span>Library</span></i></button>
-                <button class="navbutton" data-tab="history"><i data-lucide="clock-3"><span>History</span></i></button>
-                <button class="navbutton" data-tab="like"><i data-lucide="heart"><span>Liked Songs</span></i></button>
+                <button class="navbutton" data-tab="library"><i data-lucide="library"></i><span>Library</span></button>
+                <button class="navbutton" data-tab="history"><i data-lucide="clock-3"></i><span>History</span></button>
+                <button class="navbutton" data-tab="like"><i data-lucide="heart"></i><span>Liked Songs</span></button>
             </nav>
 
             <div id="sidebardivider"></div>
@@ -55,6 +57,7 @@
     <!--music controls-->
     <footer id="player" class="hiddenplayer">
         <audio id="audio"></audio>
+        <input type="range" id="seekbar" values="0" min="0" max="100">
 
         <!--music details (metadata)-->
         <div id="playermetadata">
@@ -66,12 +69,13 @@
                 <h4 id="playertitle">Trach Idle</h4>
                 <p id="playerartist">Select a song above</p>
             </div>
-            <button id="likebutton" title="Like song"> <img src="icons/like.svg" alt="like" width="20"
-                    height="20"></button>
-
+            <button id="likebutton" title="Like this Song"><i data-lucide="heart"></i></button>
+            <button id="savebutton" title="Add to Library"><i data-lucide="plus"></i></button>
         </div>
 
     </footer>
+
+    <script src="music.js"></script>
 </body>
 
 </html>
