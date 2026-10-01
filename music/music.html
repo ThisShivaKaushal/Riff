@@ -73,9 +73,23 @@
             <button id="savebutton" title="Add to Library"><i data-lucide="plus"></i></button>
         </div>
 
+        <div id="controls">
+            <button id="previousbutton"><i data-lucide="skip-back"></i></button>
+            <button id="playbutton"><i data-lucide="play"></i></button>
+            <button id="nextbutton"><i data-lucide="skip-forward"></i></button>
+            <span id="currenttime">0:00</span> / <span id="totaltime">0:00</span>
+        </div>
+
+        <div id="volumepart">
+            <i data-lucide="volume-2"></i>
+            <input type="range" id="volume" min="0" max="1" step="0.05" value="1">
+
+        </div>
+
     </footer>
 
     <script src="music.js"></script>
+    <script src="songs.js"></script>
 </body>
 
 </html>
