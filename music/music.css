@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --lightblack: #1c1c1e;
+    --white: #fff;
+    --red: #fa233b;
+    --grey: #98989d;
+    --carrot: #fb5c74;
+    --verylightblack: #2c2c2e;
+}
+
+body {
+    background: var(--lightblack);
+    color: var(--white);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.musicheader {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: rgba(rgb(206, 87, 87));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    border-bottom: 1px solid var(--verylightblack);
+    z-index: 10;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    box-shadow: 0 20px 30px rgb(37, 37, 37);
+
+}
+
+.logo h2 {
+    color: --red;
+    font-size: 20px;
+}
+
+.back a {
+    color: var(--white);
+    display: flex;
+}
+
+.main {
+    display: flex;
+    padding-top: 60px;
+}
+
+/*sidebar*/
+
+#sidebar {
+    width: 240px;
+    height: calc(100vh - 60px);
+    position: fixed;
+    top: 60px;
+    left: 0;
+    padding: 16px 12px
+}
