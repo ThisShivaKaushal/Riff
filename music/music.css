@@ -60,3 +60,299 @@ body {
     left: 0;
     padding: 16px 12px
 }
+
+.navbutton {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    background: none;
+    border: none;
+    color: var(--grey);
+    font-size: 15px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.navbutton:hover {
+    background: var(--verylightblack);
+    color: var(--white);
+
+}
+
+.navbutton.active {
+    background: var(--verylightblack);
+    color: var(--red);
+}
+
+.navbutton.active {
+    background: var(--verylightblack);
+    color: var(--red);
+}
+
+#sidebardivider {
+    height: 1px;
+    background: var(--verylightblack);
+    margin: 16px 0;
+}
+
+#queueheader {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13PX;
+    COLOR: var(--grey);
+    margin-bottom: 10px;
+    padding: 0 6px;
+
+}
+
+.queueitem:hover {
+    background: var(--verylightblack);
+
+}
+
+.queueitem img {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    object-fit: cover;
+    background: var(--verylightblack);
+
+}
+
+.queueitem p {
+    font-size: 13px;
+
+}
+
+.queueitem span {
+    font-size: 12px;
+    color: var(--verylightblack);
+}
+
+#dashboard {
+    margin-left: 240px;
+    padding: 28px 32px 120px;
+    width: 100%;
+
+}
+
+#title {
+    font-size: 28px;
+    margin-bottom: 24px;
+
+}
+
+#musicgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px 1fr));
+    gap: 20px;
+
+}
+
+.card {
+    cursor: pointer;
+
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 8px;
+    background: var(--verylightblack);
+}
+
+.card:hover img {
+    opacity: 0.8;
+}
+
+.card h4 {
+    margin-top: 10px;
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card p {
+    font-size: 13px;
+    color: var(--grey);
+
+}
+
+.emptytext {
+    color: var(--grey);
+}
+
+/* player */
+#player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: var(--verylightblack);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    transition: transform 0.3s;
+    z-index: 10;
+}
+
+.hiddenplayer {
+    transform: translateY(100%)
+}
+
+#seekbar {
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 100%;
+    accent-color: var(--red);
+    cursor: pointer;
+}
+
+#playermetadata {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 32%;
+}
+
+#thumbnail {
+    position: relative;
+}
+
+#cover {
+    width: 52px;
+    height: 52px;
+    border-radius: 6px;
+    object-fit: cover;
+    background: var(--lightblack);
+    display: block;
+}
+
+#dot {
+    display: none;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--red);
+}
+
+#thumbnail.playing #dot {
+    display: block;
+}
+
+#metadatatext {
+    min-width: 0;
+}
+
+#playertitle {
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+#playerartist {
+    font-size: 13px;
+    color: var(--grey);
+}
+
+#player button {
+    background: none;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    display: flex;
+    padding: 6px;
+}
+
+#controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--grey);
+}
+
+#playbutton {
+    background: var(--white) !important;
+    color: #000 !important;
+    border-radius: 50%;
+    padding: 10px !important;
+}
+
+#voulmepart {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 20%;
+    justify-content: flex-end;
+}
+
+volume {
+    accent-color: var(--red);
+    width: 100px;
+}
+
+@media (max-width: 700px) {
+    .main {
+        flex-direction: column;
+    }
+
+    #sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        padding: 12px;
+    }
+
+    #sidebarnav {
+        display: flex;
+        overflow-x: auto;
+    }
+
+    .navbutton {
+        width: auto;
+        white-space: nowrap;
+
+    }
+
+    .navbutton {
+        width: auto;
+        white-space: nowrap;
+    }
+
+    #sidebardivider,
+    #queuepart,
+    #volumepart,
+    #currenttime,
+    #totaltime {
+        display: none;
+    }
+
+    #dashboard {
+        margin-left: 0;
+        padding: 20px 16px 120px;
+    }
+
+    #playermetadata {
+        width: 60%
+    }
+}
+
+#likebutton.liked svg {
+    fill: #fa233b;
+    stroke: #fa233b;
+}
