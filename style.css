@@ -34,9 +34,15 @@ header {
     box-shadow: 0 20px 30px rgb(85, 35, 35);
 }
 
+#logo {
+    width: 220px;
+    height: auto;
+
+}
 
 .Githubprofile img {
     width: 32px;
+    margin-left: 1180px;
     filter: invert()
 }
 

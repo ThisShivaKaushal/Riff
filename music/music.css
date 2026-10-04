@@ -16,6 +16,11 @@ body {
     font-family: "Segoe UI", Arial, sans-serif;
 }
 
+#logo {
+    width: 180px;
+    height: auto;
+}
+
 .musicheader {
     position: sticky;
     top: 0;
